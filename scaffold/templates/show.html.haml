@@ -1,7 +1,7 @@
-%h1= t '.title'
+%h1 Show
 %p
-  = link_to t('back'), <%= plural_name %>_path
-  = link_to t('edit'), edit_<%= singular_name %>_path(@<%= singular_name %>)
+  = link_to 'back', <%= plural_name %>_path
+  = link_to 'edit', edit_<%= singular_name %>_path(@<%= singular_name %>)
 
 %dl
 <% for attribute in attributes -%>
