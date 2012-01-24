@@ -6,12 +6,12 @@
         - @<%= singular_name %>.errors.full_messages.each do |msg|
           %li= msg
  
-%fieldset  
-<% for attribute in attributes -%>
-  .clearfix
-    = f.label :<%= attribute.name %>
-    .input
-      = f.<%= attribute.field_type %> :<%= attribute.name %>
-<% end -%>
-  .actions
-    = f.submit class: 'btn primary'
+  %fieldset  
+  <% for attribute in attributes -%>
+    .clearfix
+      = f.label :<%= attribute.name %>
+      .input
+        = f.<%= attribute.field_type %> :<%= attribute.name %>
+  <% end -%>
+    .actions
+      = f.submit class: 'btn primary'
