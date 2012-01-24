@@ -1,7 +1,7 @@
 %h1 Show
 %p
-  = link_to 'back', <%= plural_name %>_path
-  = link_to 'edit', edit_<%= singular_name %>_path(@<%= singular_name %>)
+  = link_to 'back', <%= plural_name %>_path, class: 'btn'
+  = link_to 'edit', edit_<%= singular_name %>_path(@<%= singular_name %>), class: 'btn primary'
 
 %dl
 <% for attribute in attributes -%>
