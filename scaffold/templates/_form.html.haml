@@ -1,4 +1,4 @@
-= form_for(@<%= singular_name %>) do |f|
+= form_for(@<%= singular_name %>, html: {class: 'form-horizontal'}) do |f|
   - if @<%= singular_name %>.errors.any?
     #errorExplanation.alert-message.block-message.error
       %h2= "#{pluralize(@<%= singular_name %>.errors.count, 'error')} prohibited this <%= singular_name %> from being saved:"
@@ -6,12 +6,14 @@
         - @<%= singular_name %>.errors.full_messages.each do |msg|
           %li= msg
  
-  %fieldset  
+  %fieldset
+    %legend The Legend  
   <% for attribute in attributes -%>
-    .clearfix
-      = f.label :<%= attribute.name %>
-      .input
-        = f.<%= attribute.field_type %> :<%= attribute.name %>
+  .control-group
+    = f.label :<%= attribute.name %>
+    .controls
+      = f.<%= attribute.field_type %> :<%= attribute.name %>
+      %p.help-block Add help text here
   <% end -%>
-    .actions
-      = f.submit 'Submit', class: 'btn primary'
+  .actions
+    = f.submit 'Submit', class: 'btn primary'

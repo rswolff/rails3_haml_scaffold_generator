@@ -1,7 +1,7 @@
 %h1 <%= plural_name %>
 %p= link_to 'New <%= singular_name %>', new_<%= singular_name %>_path, class: 'btn primary'
 
-%table.bordered-table.zebra-striped
+%table.table.table-bordered.table-striped
   %thead
     %tr
 <% for attribute in attributes -%>
