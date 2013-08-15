@@ -1,7 +1,7 @@
 %h1 <%= plural_name %>
 %p= link_to 'New <%= singular_name %>', new_<%= singular_name %>_path, class: 'btn btn-primary'
 
-%table.table.table-bordered.table-striped
+%table.table.table-bordered.table-striped.table-hover
   %thead
     %tr
 <% for attribute in attributes -%>
